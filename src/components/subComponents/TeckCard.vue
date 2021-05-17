@@ -40,16 +40,6 @@ export default {
 </script>
 
 <style scoped>
-.card {
-  min-width: 280px;
-  width: 280px;
-  height: 440px;
-  margin: 0 12px;
-  border-radius: 12px 12px 0 0;
-  overflow: hidden;
-  border: 1px solid var(--light-grey);
-}
-
 .image {
   position: relative;
   height: 160px;
@@ -78,6 +68,12 @@ export default {
 
 .list-item {
   margin: 8px 0;
+  padding: 0;
+}
+
+.list-item:hover {
+  padding: 0 0 0 4px;
+  transition: padding-left 1 linear;
 }
 
 .pointer {

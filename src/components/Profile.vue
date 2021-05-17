@@ -143,7 +143,7 @@ section {
   justify-content: space-around;
   padding: 8px 4px;
   margin-bottom: 12px;
-  border: 2px solid var(--light-grey);
+  /* border: 2px solid var(--light-grey); */
   border-radius: 4px;
 }
 

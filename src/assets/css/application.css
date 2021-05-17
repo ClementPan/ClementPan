@@ -31,8 +31,6 @@ body {
 }
 
 section {
-  /* height: 600px; */
-  /* to be removed */
   width: 100%;
   margin: 36px 0;
 }
@@ -57,4 +55,35 @@ section .title::after {
 section .title h1 {
   font-size: 24px;
   font-weight: 700;
+}
+
+#techstack .cards,
+#portfolio .cards {
+  display: flex;
+  overflow-x: scroll;
+  padding: 12px 0;
+}
+
+.cards::-webkit-scrollbar {
+  display: none;
+}
+
+#techstack .card,
+#portfolio .card {
+  margin: 0 12px;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  border: 1px solid var(--light-grey);
+}
+
+#techstack .card {
+  min-width: 280px;
+  width: 280px;
+  height: 440px;
+}
+
+#portfolio .card {
+  min-width: 320px;
+  width: 280px;
+  height: 440px;
 }

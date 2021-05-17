@@ -28,7 +28,9 @@ export default {
           title: "Front-end",
           img: frontend,
           content: [
-            "HTML / CSS / Javascript",
+            "HTML5",
+            "CSS3",
+            "Javascript (ES6)",
             "Vue.js",
             "Bootstrap",
             "SCSS",
@@ -45,7 +47,7 @@ export default {
             "MongoDB",
             "Mongoose",
             "MySQL",
-            "RESTful api",
+            "RESTful API",
           ],
         },
         {
@@ -53,13 +55,13 @@ export default {
           title: "others",
           img: others,
           content: [
+            "Visual studio",
+            "Vue cli",
             "Git",
             "GitHub",
             "Postman",
-            "Npm",
             "Heroku",
-            "Line bot",
-            "Python：web crawler",
+            "Line chatbot",
           ],
         },
       ],
@@ -69,9 +71,4 @@ export default {
 </script>
 
 <style scoped>
-.cards {
-  display: flex;
-  overflow-x: scroll;
-  padding: 12px 0;
-}
 </style>

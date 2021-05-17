@@ -86,12 +86,13 @@ export default {
   text-align: center;
   letter-spacing: 6px;
   z-index: 999;
-  border: 2px solid #fff;
+  /* border: 2px solid #fff; */
 }
 
 .brand span {
   border: none;
   color: var(--footer-background);
+  font-weight: 900;
 }
 
 .brand h1::before {
