@@ -19,6 +19,8 @@
   --font-white: #ddd;
   --pure-white: #fff;
   --footer-background: #20201a;
+  --font-dark: #222;
+  --title-weight: 700;
 }
 
 
@@ -29,7 +31,8 @@ body {
 }
 
 section {
-  height: 500px;
+  /* height: 600px; */
+  /* to be removed */
   width: 100%;
   margin: 36px 0;
 }
@@ -37,6 +40,7 @@ section {
 section .title {
   position: relative;
   padding-left: 5%;
+  margin-bottom: 24px;
 }
 
 section .title::after {
