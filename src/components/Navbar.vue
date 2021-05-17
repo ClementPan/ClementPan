@@ -1,5 +1,5 @@
 <template>
-  <div id="navbar">
+  <div id="navbar" ref="navbar">
     <div class="brand">
       <h1><img src="../assets/images/c.svg" alt="" />lement's</h1>
     </div>
@@ -30,7 +30,7 @@ export default {
         },
         {
           id: 2,
-          name: "Tech Stack",
+          name: "Tech-Stack",
           to: "#profile",
         },
         {
@@ -58,7 +58,6 @@ export default {
 #navbar {
   width: 100%;
   height: 160px;
-  /* border: 1px solid #000; */
 }
 
 .brand {
@@ -83,7 +82,10 @@ export default {
 nav {
   height: 40px;
   width: 100%;
-  position: relative;
+  position: sticky;
+  top: 2px;
+  z-index: 999;
+  background-color: #fff;
 }
 
 .navlist {
@@ -106,12 +108,12 @@ nav::after {
 
 nav::after {
   top: 0;
-  border-top: 2px solid #aaa;
+  border-top: 2px solid var(--light-grey);
 }
 
 nav::after {
   bottom: 0;
-  border-bottom: 2px solid #aaa;
+  border-bottom: 2px solid var(--light-grey);
 }
 
 .navItem {
@@ -120,10 +122,13 @@ nav::after {
   flex-direction: row;
   align-items: center;
   z-index: 1;
+  position: relative;
 }
 
 .navItem p {
   height: 20px;
+  color: var(--dark-grey);
+  font-weight: 700;
   line-height: 20px;
   text-align: center;
   position: relative;
@@ -136,7 +141,7 @@ nav::after {
   content: "";
   width: 0px;
   height: 20px;
-  border-bottom: 1px solid #000;
+  border-bottom: 2px solid var(--light-grey);
   transition: width 0.3s 0 linear;
 }
 

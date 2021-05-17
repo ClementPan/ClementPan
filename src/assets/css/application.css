@@ -12,6 +12,16 @@
   box-sizing: border-box;
 }
 
+:root {
+  --dark-grey: #666;
+  --light-grey: #aaa;
+  --dark-background: #444;
+  --font-white: #ddd;
+  --pure-white: #fff;
+  --footer-background: #20201a;
+}
+
+
 body {
   height: 100vh;
   max-width: 1400px;

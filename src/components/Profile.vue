@@ -8,6 +8,15 @@
         <div class="motto">
           <p>{{ motto }}</p>
         </div>
+        <div class="icon-bar">
+          <ul class="icon-list">
+            <li class="icon-item" v-for="item of iconList" :key="item.id">
+              <a :href="item.link" target="_blank">
+                <img :src="item.image" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
         <div class="description">
           <ul class="profile-list">
             <li v-for="item of profileList" :key="item.id">
@@ -22,11 +31,38 @@
 </template>
 
 <script>
+import medium from "../assets/images/medium.svg";
+import github from "../assets/images/github.svg";
+import linkedin from "../assets/images/linkedin.svg";
+import facebook from "../assets/images/facebook.svg";
+
 export default {
   name: "Profile",
   data() {
     return {
       motto: "A Vue.js web front-end developer",
+      iconList: [
+        {
+          id: 1,
+          image: medium,
+          link: "https://zzz2999582.medium.com/",
+        },
+        {
+          id: 2,
+          image: github,
+          link: "https://github.com/ClementPan",
+        },
+        {
+          id: 3,
+          image: linkedin,
+          link: "https://www.linkedin.com/in/clement-pan-98a9331aa/",
+        },
+        {
+          id: 4,
+          image: facebook,
+          link: "https://www.facebook.com/profile.php?id=100001602038553",
+        },
+      ],
       profileList: [
         {
           id: 1,
@@ -71,7 +107,6 @@ section {
 
 .card-content {
   margin-top: 36px;
-  /* border: 1px solid #000; */
   padding: 0 12%;
 }
 
@@ -79,15 +114,50 @@ section {
   margin-bottom: 36px;
 }
 
-.description {
-  border: 1px solid #000;
-}
-.description li {
-  list-style: none;
-  display: flex;
+.motto p {
+  font-weight: 700;
+  position: relative;
+  text-align: center;
 }
 
-li p:first-child {
-  /* min-width: 90px; */
+.motto p::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid var(--dark-grey);
+  transition: width 0.3s linear;
+}
+
+.motto:hover p::after {
+  transition: width 0.3s linear;
+  width: 0%;
+}
+
+.icon-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 8px 4px;
+  margin-bottom: 12px;
+  border: 2px solid var(--light-grey);
+  border-radius: 4px;
+}
+
+.icon-list li {
+  height: 28px;
+  width: 28px;
+}
+
+.icon-list li img {
+  width: 100%;
+  height: 100%;
+}
+
+.description li {
+  display: flex;
 }
 </style>
