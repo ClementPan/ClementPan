@@ -1,6 +1,8 @@
 <template>
   <section id="portfolio">
-    <h1>Portfolio</h1>
+    <div class="title">
+      <h1>Portfolio</h1>
+    </div>
   </section>
 </template>
 

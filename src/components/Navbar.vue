@@ -1,7 +1,7 @@
 <template>
   <div id="navbar">
     <div class="brand">
-      <h1>Clement's</h1>
+      <h1><img src="../assets/images/c.svg" alt="" />lement's</h1>
     </div>
     <nav>
       <ul class="navlist">
@@ -58,18 +58,7 @@ export default {
 #navbar {
   width: 100%;
   height: 160px;
-  position: relative;
-}
-
-#navbar::after {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  content: "";
-  width: 97%;
-  height: 100%;
-  border-bottom: 1px solid #aaa;
+  /* border: 1px solid #000; */
 }
 
 .brand {
@@ -81,6 +70,12 @@ export default {
   justify-content: center;
 }
 
+.brand img {
+  width: 28px;
+  height: 28px;
+  margin-right: 2px;
+}
+
 .brand h1 {
   font-size: 36px;
 }
@@ -88,6 +83,7 @@ export default {
 nav {
   height: 40px;
   width: 100%;
+  position: relative;
 }
 
 .navlist {
@@ -96,6 +92,26 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+}
+
+nav::before,
+nav::after {
+  position: absolute;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  transform: translateY(-2px);
+}
+
+nav::after {
+  top: 0;
+  border-top: 2px solid #aaa;
+}
+
+nav::after {
+  bottom: 0;
+  border-bottom: 2px solid #aaa;
 }
 
 .navItem {

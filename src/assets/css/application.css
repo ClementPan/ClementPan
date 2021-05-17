@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Condensed:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500&display=swap');
 
 * {
   font-size: 16px;
   font-weight: normal;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', 'Noto Serif TC', sans-serif;
   line-height: 1.5;
   color: #222;
   outline: none;
@@ -17,10 +19,28 @@ body {
 }
 
 section {
-  /* background-color: #aaa; */
   height: 500px;
+  width: 100%;
   margin: 36px 0;
-  /* border: 1px solid #000; */
 }
 
+section .title {
+  position: relative;
+  padding-left: 5%;
+}
 
+section .title::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 95%;
+  border-bottom: 2px solid #aaa;
+}
+
+section .title h1 {
+  font-size: 24px;
+  font-weight: 700;
+}

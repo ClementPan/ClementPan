@@ -1,6 +1,8 @@
 <template>
   <section id="education">
-    <h1>Education</h1>
+    <div class="title">
+      <h1>Education</h1>
+    </div>
   </section>
 </template>
 

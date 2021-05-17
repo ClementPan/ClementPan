@@ -1,6 +1,8 @@
 <template>
   <section id="techstack">
-    <h1>TechStack</h1>
+    <div class="title">
+      <h1>TechStack</h1>
+    </div>
   </section>
 </template>
 
