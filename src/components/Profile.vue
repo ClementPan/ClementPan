@@ -112,28 +112,13 @@ section {
 
 .motto {
   margin-bottom: 36px;
-}
-
-.motto p {
-  font-weight: 700;
-  position: relative;
   text-align: center;
 }
 
-.motto p::after {
-  position: absolute;
-  left: 0;
-  top: 0;
-  content: "";
-  width: 100%;
-  height: 100%;
+.motto p {
+  display: inline-block;
+  font-weight: 700;
   border-bottom: 2px solid var(--dark-grey);
-  transition: width 0.3s linear;
-}
-
-.motto:hover p::after {
-  transition: width 0.3s linear;
-  width: 0%;
 }
 
 .icon-list {
@@ -143,7 +128,6 @@ section {
   justify-content: space-around;
   padding: 8px 4px;
   margin-bottom: 12px;
-  /* border: 2px solid var(--light-grey); */
   border-radius: 4px;
 }
 
