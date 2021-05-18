@@ -77,7 +77,7 @@ section .title h1 {
 #techstack .card,
 #portfolio .card {
   margin: 0 12px;
-  border-radius: 12px 12px 0 0;
+  /* border-radius: 12px 12px 0 0; */
   overflow: hidden;
   border: 1px solid var(--light-grey);
 }
@@ -91,5 +91,6 @@ section .title h1 {
 #portfolio .card {
   min-width: 320px;
   width: 280px;
-  height: 440px;
+  /* height: 440px; */
+  height: 540px;
 }

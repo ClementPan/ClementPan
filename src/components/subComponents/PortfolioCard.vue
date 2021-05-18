@@ -9,23 +9,40 @@
           <img :src="tags.vue" alt="" />
         </div>
       </div> -->
+      <div class="link">
+        <a :href="cardData.github" target="_blank">
+          <img :src="link" alt="" />
+          <p>Github</p>
+        </a>
+      </div>
+      <p class="name">{{ cardData.title }}</p>
     </div>
     <div class="content">
-      <p class="name">{{ cardData.title }}</p>
       <p class="type">
         <i class="fas fa-dot-circle"></i>
-        專案類型：{{ cardData.type }}
+        類型：{{ cardData.type }}
       </p>
       <p class="techs">
         <i class="fas fa-dot-circle"></i>
-        應用技術：
-        <br />
+        技術：
         {{ cardData.techs | listFormatFilter }}
+      </p>
+      <p class="spec">
+        <i class="fas fa-dot-circle"></i>
+        功能：
+        {{ cardData.spec | listFormatFilter }}
+      </p>
+      <p class="text">
+        <i class="fas fa-dot-circle"></i>
+        簡述：
+        <br />
+        {{ cardData.text }}
       </p>
     </div>
   </div>
 </template>
 <script>
+import link from "../../assets/images/link.svg";
 import { emptyImageFilter } from "../../utils/mixin";
 import vue from "../../assets/images/vue.png";
 export default {
@@ -42,6 +59,7 @@ export default {
   },
   data() {
     return {
+      link,
       tags: {
         vue,
       },
@@ -50,7 +68,7 @@ export default {
   },
   filters: {
     listFormatFilter(list) {
-      return list.join(", ");
+      return list.join("、");
     },
   },
 };
@@ -68,6 +86,50 @@ export default {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.link {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 24px;
+  overflow: hidden;
+  transition: width 0.2s linear;
+  background-color: var(--font-white);
+  padding: 0px 4px;
+  border-radius: 2px;
+}
+
+.link a {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.link a img {
+  width: 100%;
+  height: 100%;
+  margin-right: 4px;
+}
+
+.link:hover {
+  transition: width 0.2s linear;
+  width: 100px;
+}
+
+.link:hover img {
+  margin: 0 4px;
+}
+
+.name {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  background-color: var(--font-dark);
+  color: var(--pure-white);
+  padding: 0 8px;
 }
 
 .tags {
@@ -95,14 +157,11 @@ export default {
   align-items: flex-start;
 }
 
-.name {
-  background-color: var(--font-dark);
-  color: var(--pure-white);
-  padding: 0 8px;
-  margin-bottom: 8px;
-}
-
 .techs br + i {
   margin-left: 20px;
+}
+
+.text {
+  margin-top: 8px;
 }
 </style>

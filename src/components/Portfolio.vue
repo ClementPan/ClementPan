@@ -26,15 +26,19 @@ export default {
           title: "Simple Twitter",
           img: twitter,
           type: "團體協作專案",
-          techs: ["Vue.js", "Vuex", "Vue-socket.io"],
+          github: "https://github.com/ClementPan/simpleTwitterX",
+          techs: ["Vue.js", "Vuex", "socket.io"],
+          spec: ["推文", "按讚", "追蹤", "線上聊天"],
           text:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dolorem atque ipsa enim delectus sint quaerat at, dolor nobis. Dolor, perferendis numquam ipsam obcaecati hic aut ab similique deleniti debitis!",
+            "Alpha camp 期末協作專題。由兩位前端搭配兩位後端，採前後分離的方式製作簡易版推特 SPA。筆者負責 70% 之頁面切版、API 串接。過程使用 Trello 看板規劃與追蹤開發進度、線上開會軟體實現遠端協作。",
         },
         {
-          title: "URL Archive",
+          title: "Tabs Archive",
           img: "",
           type: "個人專案",
+          github: "https://github.com/ClementPan/simpleTwitterX",
           techs: ["Chrome extension", "Vue.js"],
+          spec: [],
           text:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dolorem atque ipsa enim delectus sint quaerat at, dolor nobis. Dolor, perferendis numquam ipsam obcaecati hic aut ab similique deleniti debitis!",
         },

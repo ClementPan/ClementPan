@@ -64,8 +64,8 @@ export default {
 
 <style scoped>
 #contact {
-  min-width: 100vw;
-  width: 100vw;
+  min-width: 99vw;
+  width: 99vw;
   /* max-width: 100vw; */
   background-color: var(--footer-background);
   /* background-color: var(--font-white); */
@@ -75,7 +75,8 @@ export default {
   /* border-radius: 16px 16px 0 0; */
   position: relative;
   /* left: calc(0 - 100vw / 2 + 700px); */
-  left: calc(100% / 2 - 100vw / 2);
+  left: calc(100% / 2 - 99vw / 2);
+  /* left: calc(100vw / 2 - 100% / 2); */
   /* left: calc(0 - 100vw / 2); */
   /* left: -132px; */
 }
