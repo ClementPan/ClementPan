@@ -15,7 +15,9 @@
           <p>Github</p>
         </a>
       </div>
-      <p class="name">{{ cardData.title }}</p>
+      <a :href="cardData.github" target="_blank">
+        <p class="name">{{ cardData.title }}</p></a
+      >
     </div>
     <div class="content">
       <p class="type">
@@ -41,6 +43,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import link from "../../assets/images/link.svg";
 import { emptyImageFilter } from "../../utils/mixin";
@@ -130,6 +133,12 @@ export default {
   background-color: var(--font-dark);
   color: var(--pure-white);
   padding: 0 8px;
+}
+
+.name:hover {
+  color: var(--font-dark);
+  background-color: var(--pure-white);
+  cursor: pointer;
 }
 
 .tags {

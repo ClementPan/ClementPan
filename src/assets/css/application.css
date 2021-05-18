@@ -94,3 +94,57 @@ section .title h1 {
   /* height: 440px; */
   height: 540px;
 }
+
+
+/* dropdown */
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 24px;
+}
+
+.dropdown img {
+  width: 100%;
+  height: 100%;
+}
+
+.dropdown input {
+  display: none;
+}
+
+label:hover {
+  /* border: 1px solid #000; */
+}
+
+.dropdown label > img {
+  transform: rotate(180deg);
+  transition: transform 0.15s linear;
+}
+
+.dropdown input:checked + label > img {
+  transform: rotate(0deg);
+  transition: transform 0.15s linear;
+}
+
+.card-body {
+  display: none;
+  height: 0;
+  /* transform-origin: top; */
+  /* transform: scaleY(0); */
+  /* transition: transform 0.3s linear; */
+  /* opacity: 0; */
+}
+
+.isDropped {
+  display: block;
+  height: auto;
+  /* opacity: 1; */
+  /* transform: scaleY(1); */
+  /* transition: transform 0.3s linear; */
+  /* transition: 0.5s linear; */
+}
+
+

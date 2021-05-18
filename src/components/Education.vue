@@ -27,7 +27,8 @@ export default {
           link: "https://tw.alphacamp.co/",
           content: [
             {
-              title: "學期 3：軟體工程師養成 - 前端工程師專修",
+              id: 1,
+              title: "學期 3：軟體工程師養成 - 前端專修",
               topic: [
                 "CSS 進階概念與練習",
                 "CSS 預處理器",
@@ -37,6 +38,7 @@ export default {
               ],
             },
             {
+              id: 2,
               title: "學期 2-3：後端開發實務",
               topic: [
                 "網路概論",
@@ -47,9 +49,10 @@ export default {
               ],
             },
             {
+              id: 3,
               title: "學期 2-2：軟體開發實務入門",
               topic: [
-                "從「做網頁」進入「軟體開發」的實務與工具",
+                "軟體開發的實務與工具",
                 "運用 AJAX 串接第三方 API",
                 "運用 MVC 架構",
                 "程式碼模組化",
@@ -57,6 +60,7 @@ export default {
               ],
             },
             {
+              id: 4,
               title: "學期 2-1：軟體開發實務入門",
               topic: [
                 "網頁切版技巧",
@@ -67,6 +71,7 @@ export default {
               ],
             },
             {
+              id: 5,
               title: "學期 1：軟體開發實務入門",
               topic: [
                 "使用者介面與 wireframe",
@@ -85,10 +90,12 @@ export default {
           link: "https://tcsl.nccu.edu.tw/",
           content: [
             {
+              id: 1,
               title: "語料處理",
               topic: ["R Basic"],
             },
             {
+              id: 2,
               title: "程式設計概論",
               topic: ["Python Basic"],
             },
@@ -101,6 +108,7 @@ export default {
           link: "https://european.nccu.edu.tw/",
           content: [
             {
+              id: 1,
               title: "法國勃艮地大學交換學生",
               topic: [],
             },

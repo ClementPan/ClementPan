@@ -40,7 +40,7 @@ export default {
         },
         {
           id: 2,
-          title: "My coding history",
+          title: "My Coding History",
           image: github,
           link: "https://github.com/ClementPan",
         },
@@ -52,7 +52,7 @@ export default {
         },
         {
           id: 4,
-          title: "My leaked personal information",
+          title: "My Leaked Personal Information",
           image: facebook,
           link: "https://www.facebook.com/profile.php?id=100001602038553",
         },

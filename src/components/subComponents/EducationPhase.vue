@@ -8,8 +8,12 @@
       </a>
       <h1>{{ phaseData.title }}</h1>
       <div class="dropdown">
-        <input ref="input" type="checkbox" :id="`dropdown-${phaseData.id}`" />
-        <label :for="`dropdown-${phaseData.id}`" @click="drop">
+        <input
+          :ref="`dropdown${phaseData.id}`"
+          type="checkbox"
+          :id="`dropdown${phaseData.id}`"
+        />
+        <label :for="`dropdown${phaseData.id}`" @click="drop">
           <img :src="dropdownIcon" alt="" />
         </label>
       </div>
@@ -17,22 +21,11 @@
     <!-- <div class="card-body" v-show="isDropped"> -->
     <div class="card-body" :class="{ isDropped: isDropped }">
       <ul class="sub-phase-list">
-        <li
-          class="sub-phase-item"
+        <EducationSubPhase
           v-for="(subPhase, index) of phaseData.content"
           :key="index"
-        >
-          <h2 class="sub-phase-title">{{ subPhase.title }}</h2>
-          <ul class="sub-phase-content">
-            <li
-              class="sub-phase-content-item"
-              v-for="(item, index) of subPhase.topic"
-              :key="index"
-            >
-              {{ index + 1 }}：{{ item }}
-            </li>
-          </ul>
-        </li>
+          :subPhaseData="subPhase"
+        />
       </ul>
     </div>
   </div>
@@ -40,9 +33,10 @@
 
 <script>
 import dropdown from "../../assets/images/dropdown.svg";
-// import dropdownIcon from "../../assets/images/subDropdownIcon.svg";
+import EducationSubPhase from "./EducationSubPhase.vue";
 
 export default {
+  components: { EducationSubPhase },
   name: "EduPhase",
   props: {
     phaseData: {
@@ -53,14 +47,12 @@ export default {
   data() {
     return {
       dropdownIcon: dropdown,
-      // subDropdownIcon: dropdownIcon,
       isDropped: false,
     };
   },
   methods: {
     drop() {
-      const input = this.$refs.input;
-      // false: dropped, true: undropped
+      const input = this.$refs[`dropdown${this.phaseData.id}`];
       if (input.checked) {
         return (this.isDropped = false);
       }
@@ -72,7 +64,6 @@ export default {
 
 <style scoped>
 .card {
-  /* border: 1px solid #000; */
   min-width: 320px;
   /* width: 320px; */
   /* height: 440px; */
@@ -85,7 +76,6 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* border: 1px solid red; */
   position: relative;
 }
 
@@ -103,53 +93,11 @@ export default {
 .card-head h1 {
   color: var(--font-dark);
   font-size: 20px;
-}
-
-.sub-phase-item {
-  border: 1px solid #000;
-}
-
-.dropdown {
-  position: absolute;
-  right: 0;
-  width: 28px;
-  height: 24px;
-}
-
-.dropdown img {
-  width: 100%;
-  height: 100%;
-}
-
-.dropdown input {
-  display: none;
-}
-
-.dropdown label > img {
-  transform: rotate(180deg);
-  transition: transform 0.3s linear;
-}
-
-.dropdown input:checked + label > img {
-  transform: rotate(0deg);
-  transition: transform 0.3s linear;
+  font-weight: 700;
 }
 
 .card-body {
-  display: none;
-  height: 0;
-  /* transform-origin: top; */
-  /* transform: scaleY(0); */
-  /* transition: transform 0.3s linear; */
-  /* opacity: 0; */
-}
-
-.isDropped {
-  display: block;
-  height: auto;
-  /* opacity: 1; */
-  /* transform: scaleY(1); */
-  /* transition: transform 0.3s linear; */
-  /* transition: 0.5s linear; */
+  /* border: 1px solid #000; */
+  padding-left: 48px;
 }
 </style>
