@@ -1,31 +1,43 @@
 <template>
   <li class="sub-phase-item">
-    <h2 class="sub-phase-title">{{ subPhaseData.title }}</h2>
+    <template v-if="!subPhaseData.topic.length">
+      <h2 class="sub-phase-title">
+        {{ subPhaseData.title }}
+      </h2>
+    </template>
+    <template v-else-if="subPhaseData.topic.length === 1">
+      <h2 class="sub-phase-title">
+        {{ subPhaseData.title }}：{{ subPhaseData.topic[0] }}
+      </h2>
+    </template>
+    <template v-else>
+      <h2 class="sub-phase-title">{{ subPhaseData.title }}</h2>
 
-    <div class="dropdown">
-      <input ref="input" type="checkbox" :id="`dropdown-${subPhaseData.id}`" />
-      <label :for="`dropdown-${subPhaseData.id}`" @click="drop">
-        <img
-          v-if="subPhaseData.topic.length > 1"
-          :src="subDropdownIcon"
-          alt=""
+      <div class="dropdown">
+        <input
+          ref="input"
+          type="checkbox"
+          :id="`dropdown-${subPhaseData.id}`"
         />
-      </label>
-    </div>
+        <label :for="`dropdown-${subPhaseData.id}`" @click="drop">
+          <img :src="subDropdownIcon" alt="" />
+        </label>
+      </div>
 
-    <ul v-if="isDropped" class="sub-phase-content">
-      <li
-        class="sub-phase-content-item"
-        v-for="(item, index) of subPhaseData.topic"
-        :key="index"
-      >
-        <p class="item-index">{{ index + 1 }}：</p>
-        <!-- <img :src="checkedIcon" alt="" /> -->
-        <p>
-          {{ item }}
-        </p>
-      </li>
-    </ul>
+      <ul v-if="isDropped" class="sub-phase-content">
+        <li
+          class="sub-phase-content-item"
+          v-for="(item, index) of subPhaseData.topic"
+          :key="index"
+        >
+          <p class="item-index">{{ index + 1 }}：</p>
+          <!-- <img :src="checkedIcon" alt="" /> -->
+          <p>
+            {{ item }}
+          </p>
+        </li>
+      </ul>
+    </template>
   </li>
 </template>
 
@@ -69,6 +81,7 @@ export default {
   margin-bottom: 24px;
   border-left: 4px solid var(--font-dark);
   padding-left: 4px;
+  margin-left: 4px;
 }
 
 .sub-phase-title {

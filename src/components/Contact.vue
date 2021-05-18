@@ -65,7 +65,9 @@ export default {
 <style scoped>
 #contact {
   min-width: 99vw;
+  /* min-width: 100vw; */
   width: 99vw;
+  /* width: 100vw; */
   /* max-width: 100vw; */
   background-color: var(--footer-background);
   /* background-color: var(--font-white); */
@@ -79,6 +81,7 @@ export default {
   /* left: calc(100vw / 2 - 100% / 2); */
   /* left: calc(0 - 100vw / 2); */
   /* left: -132px; */
+  margin-top: 72px;
 }
 
 .brand {
@@ -119,7 +122,7 @@ export default {
 }
 
 .contact-panel {
-  background-color: var(--dark-background);
+  /* background-color: var(--dark-background); */
   border-radius: 16px 16px 0 0;
   padding: 16px;
   height: 240px;
@@ -139,6 +142,9 @@ export default {
 }
 
 .contact-item img {
+  /* border: 1px solid #000; */
+  background-color: var(--font-white);
+  padding: 4px;
   height: 28px;
   width: 28px;
   margin-right: 12px;
@@ -150,7 +156,7 @@ export default {
 }
 
 .copyright {
-  background-color: var(--font-dark);
+  /* background-color: var(--font-dark); */
   color: var(--font-white);
   /* color: var(--font-dark); */
   font-size: 12px;

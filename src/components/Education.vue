@@ -112,6 +112,16 @@ export default {
               title: "法國勃艮地大學交換學生",
               topic: [],
             },
+            {
+              id: 2,
+              title: "歐語營活動長",
+              topic: [],
+            },
+            {
+              id: 3,
+              title: "系男籃隊長",
+              topic: [],
+            },
           ],
         },
       ],
@@ -121,6 +131,4 @@ export default {
 </script>
 
 <style scoped>
-#education {
-}
 </style>
