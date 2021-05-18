@@ -30,7 +30,7 @@ export default {
         },
         {
           id: 2,
-          name: "Tech-Stack",
+          name: "Tech_Stack",
           to: "#profile",
         },
         {
@@ -82,30 +82,38 @@ export default {
 
 nav {
   height: 40px;
-  width: 100%;
+  /* width: 100%; */
   position: sticky;
   top: 2px;
   z-index: 999;
   background-color: #fff;
   border-top: 2px solid var(--light-grey);
   border-bottom: 2px solid var(--light-grey);
+  /* border: 1px solid #000; */
+  overflow-x: scroll;
+}
+
+nav::-webkit-scrollbar {
+  display: none;
 }
 
 .navlist {
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
 }
 
 .navItem {
   height: 100%;
+  width: auto;
   display: flex;
   flex-direction: row;
   align-items: center;
   z-index: 1;
   position: relative;
+  padding: 0 8px;
 }
 
 .navItem p {
