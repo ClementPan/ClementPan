@@ -64,10 +64,20 @@ export default {
 
 <style scoped>
 #contact {
-  height: auto;
+  min-width: 100vw;
+  width: 100vw;
+  /* max-width: 100vw; */
   background-color: var(--footer-background);
+  /* background-color: var(--font-white); */
   display: flex;
+  padding: 36px 0 0 0;
   flex-direction: column;
+  /* border-radius: 16px 16px 0 0; */
+  position: relative;
+  /* left: calc(0 - 100vw / 2 + 700px); */
+  left: calc(100% / 2 - 100vw / 2);
+  /* left: calc(0 - 100vw / 2); */
+  /* left: -132px; */
 }
 
 .brand {
@@ -86,7 +96,6 @@ export default {
   text-align: center;
   letter-spacing: 6px;
   z-index: 999;
-  /* border: 2px solid #fff; */
 }
 
 .brand span {
@@ -110,7 +119,7 @@ export default {
 
 .contact-panel {
   background-color: var(--dark-background);
-  border-radius: 12px 12px 0 0;
+  border-radius: 16px 16px 0 0;
   padding: 16px;
   height: 240px;
   display: flex;
@@ -140,7 +149,9 @@ export default {
 }
 
 .copyright {
+  background-color: var(--font-dark);
   color: var(--font-white);
+  /* color: var(--font-dark); */
   font-size: 12px;
   padding: 8px 0;
   text-align: center;

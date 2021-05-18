@@ -18,7 +18,9 @@
       </p>
       <p class="techs">
         <i class="fas fa-dot-circle"></i>
-        應用技術：{{ cardData.techs }}
+        應用技術：
+        <br />
+        {{ cardData.techs | listFormatFilter }}
       </p>
     </div>
   </div>
@@ -45,6 +47,11 @@ export default {
       },
       projectTags: [],
     };
+  },
+  filters: {
+    listFormatFilter(list) {
+      return list.join(", ");
+    },
   },
 };
 </script>
@@ -93,5 +100,9 @@ export default {
   color: var(--pure-white);
   padding: 0 8px;
   margin-bottom: 8px;
+}
+
+.techs br + i {
+  margin-left: 20px;
 }
 </style>

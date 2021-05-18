@@ -21,23 +21,29 @@
   --footer-background: #20201a;
   --font-dark: #222;
   --title-weight: 700;
+  --body-background: #ccc
 }
 
-
 body {
-  height: 100vh;
+  height: 100%;
   max-width: 1400px;
   margin: 0 auto;
+  background-color:var(--font-white);
 }
 
 section {
+  /* margin: 36px auto; */
   width: 100%;
-  margin: 36px 0;
+  /* max-width: 1400px; */
+  /* margin: 36px 0; */
+  padding: 36px 0;
+  background-color: var(--pure-white);
 }
 
 section .title {
   position: relative;
-  padding-left: 5%;
+  /* padding-left: 5%; */
+  padding: 0 12px;
   margin-bottom: 24px;
 }
 
@@ -48,7 +54,7 @@ section .title::after {
   left: 50%;
   transform: translateX(-50%);
   height: 100%;
-  width: 95%;
+  width: calc(100% - 24px);
   border-bottom: 2px solid #aaa;
 }
 

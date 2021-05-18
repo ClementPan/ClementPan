@@ -1,5 +1,5 @@
 <template>
-  <div id="navbar" ref="navbar">
+  <div id="navbar">
     <div class="brand">
       <h1><img src="../assets/images/c.svg" alt="" />lement's</h1>
     </div>
@@ -56,6 +56,7 @@ export default {
 
 <style scoped>
 #navbar {
+  background-color: var(--pure-white);
   width: 100%;
   height: 160px;
 }
@@ -86,6 +87,8 @@ nav {
   top: 2px;
   z-index: 999;
   background-color: #fff;
+  border-top: 2px solid var(--light-grey);
+  border-bottom: 2px solid var(--light-grey);
 }
 
 .navlist {
@@ -94,26 +97,6 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-}
-
-nav::before,
-nav::after {
-  position: absolute;
-  left: 0;
-  content: "";
-  width: 100%;
-  height: 100%;
-  transform: translateY(-2px);
-}
-
-nav::after {
-  top: 0;
-  border-top: 2px solid var(--light-grey);
-}
-
-nav::after {
-  bottom: 0;
-  border-bottom: 2px solid var(--light-grey);
 }
 
 .navItem {
