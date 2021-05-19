@@ -89,6 +89,9 @@ export default {
 section {
   height: auto;
   border: none;
+  background-color: var(--dark-grey);
+  background-color: #1d3557;
+  /* background-color: #0d1b3a; */
 }
 
 .avatar {
@@ -101,13 +104,15 @@ section {
   width: 250px;
   height: 250px;
   border-radius: 8px;
-  filter: grayscale(20%);
+  /* filter: grayscale(80%); */
+  /* filter: hue-rotate(0deg); */
   object-fit: cover;
 }
 
 .card-content {
   margin-top: 36px;
   padding: 0 12%;
+  /* background-color: #aaa; */
 }
 
 .motto {
@@ -117,11 +122,15 @@ section {
 
 .motto p {
   display: inline-block;
-  font-weight: 700;
-  border-bottom: 2px solid var(--dark-grey);
+  font-weight: 500;
+  /* border-bottom: 2px solid var(--dark-grey); */
+  border-bottom: 2px solid #f1faee;
+  /* color: var(--pure-white); */
+  color: #f1faee;
 }
 
 .icon-list {
+  /* width: auto; */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -129,20 +138,46 @@ section {
   padding: 8px 4px;
   margin-bottom: 12px;
   border-radius: 4px;
+  background-color: #f1faee;
 }
 
-.icon-list li {
-  height: 28px;
-  width: 28px;
+.icon-list .icon-item {
+  height: 24px;
+  width: 24px;
+  /* padding-bottom: 4px; */
+  vertical-align: bottom;
+  /* border-bottom: 2px solid var(--dark-grey); */
+  /* border-bottom: 2px solid var(--dark-grey); */
 }
 
-.icon-list li img {
+.icon-list .icon-item a {
+  height: 100%;
+  width: 100%;
+  /* border: 1px solid #000; */
+}
+
+.icon-list .icon-item img {
+  position: relative;
+  bottom: 0;
   width: 100%;
   height: 100%;
+  transition: bottom 0.15s linear;
+}
+
+.icon-list .icon-item:hover img {
+  bottom: 4px;
+  transition: bottom 0.15s linear;
 }
 
 .description li {
   display: flex;
+  /* color: #f1faee; */
+}
+
+.description li p {
+  color: #f1faee;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 @media (min-width: 768px) {
@@ -165,11 +200,13 @@ section {
   }
 
   .icon-list {
-    justify-content: flex-start;
+    width: 230px;
+    /* background-color: red; */
+    /* justify-content: flex-start; */
   }
 
   .icon-list li {
-    margin-right: 18px;
+    /* margin-right: 18px; */
   }
 }
 </style>

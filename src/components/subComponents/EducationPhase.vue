@@ -67,7 +67,7 @@ export default {
 
 <style scoped>
 .card {
-  min-width: 320px;
+  min-width: 340px;
   /* width: 320px; */
   /* height: 440px; */
   margin: 0 12px;
@@ -75,11 +75,14 @@ export default {
 }
 
 .card-head {
-  height: 44px;
+  /* height: 44px; */
   display: flex;
   flex-direction: row;
   align-items: center;
   position: relative;
+  border-bottom: 2px solid var(--font-white);
+  padding-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 .icon {

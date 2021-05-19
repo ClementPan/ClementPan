@@ -1,7 +1,7 @@
 <template>
   <div id="navbar">
     <div class="brand">
-      <h1><img src="../assets/images/c.svg" alt="" />lement's</h1>
+      <h1><img src="../assets/images/c.svg" alt="" />lément's</h1>
     </div>
     <nav>
       <ul class="navlist">
@@ -82,14 +82,11 @@ export default {
 
 nav {
   height: 40px;
-  /* width: 100%; */
   position: sticky;
   top: 2px;
   z-index: 999;
   background-color: #fff;
   border-top: 2px solid var(--light-grey);
-  border-bottom: 2px solid var(--light-grey);
-  /* border: 1px solid #000; */
   overflow-x: scroll;
 }
 

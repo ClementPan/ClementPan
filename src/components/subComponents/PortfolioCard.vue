@@ -99,7 +99,7 @@ export default {
   height: 24px;
   overflow: hidden;
   transition: width 0.2s linear;
-  background-color: var(--font-white);
+  background-color: transparent;
   padding: 0px 4px;
   border-radius: 2px;
 }
@@ -118,7 +118,8 @@ export default {
 }
 
 .link:hover {
-  transition: width 0.2s linear;
+  background-color: var(--font-white);
+  transition: 0.3s linear;
   width: 100px;
 }
 
@@ -133,12 +134,15 @@ export default {
   background-color: var(--font-dark);
   color: var(--pure-white);
   padding: 0 8px;
+  transition: 0.15s linear;
 }
 
 .name:hover {
   color: var(--font-dark);
   background-color: var(--pure-white);
   cursor: pointer;
+  bottom: 16px;
+  transition: 0.15s linear;
 }
 
 .tags {

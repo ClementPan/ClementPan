@@ -138,18 +138,10 @@ export default {
   }
 
   .card {
-    min-width: 40%;
-    width: 40%;
-    /* max-width: 50%; */
+    /* min-width: 30%; */
+    width: 30%;
     flex: 1;
     padding-bottom: 12px;
-    border-bottom: 1px solid var(--light-grey);
-  }
-
-  .card:last-child {
-    /* display: block; */
-    /* flex: 0; */
-    /* min-width: 80%; */
   }
 }
 </style>

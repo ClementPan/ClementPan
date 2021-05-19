@@ -1,7 +1,7 @@
 <template>
   <section id="contact">
     <div class="brand">
-      <h1><span>Cle</span>ment's</h1>
+      <h1><span>Clé</span>ment's</h1>
     </div>
     <div class="contact-panel">
       <ul class="contact-list">
@@ -65,27 +65,18 @@ export default {
 <style scoped>
 #contact {
   min-width: 99vw;
-  /* min-width: 100vw; */
   width: 99vw;
-  /* width: 100vw; */
-  /* max-width: 100vw; */
   background-color: var(--footer-background);
-  /* background-color: var(--font-white); */
   display: flex;
   padding: 36px 0 0 0;
   flex-direction: column;
-  /* border-radius: 16px 16px 0 0; */
   position: relative;
-  /* left: calc(0 - 100vw / 2 + 700px); */
   left: calc(100% / 2 - 99vw / 2);
-  /* left: calc(100vw / 2 - 100% / 2); */
-  /* left: calc(0 - 100vw / 2); */
-  /* left: -132px; */
   margin-top: 72px;
 }
 
 .brand {
-  height: 120px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -122,9 +113,6 @@ export default {
 }
 
 .contact-panel {
-  /* background-color: var(--dark-background); */
-  border-radius: 16px 16px 0 0;
-  padding: 16px;
   height: 240px;
   display: flex;
   flex-direction: column;
@@ -142,12 +130,12 @@ export default {
 }
 
 .contact-item img {
-  /* border: 1px solid #000; */
   background-color: var(--font-white);
   padding: 4px;
   height: 28px;
   width: 28px;
   margin-right: 12px;
+  border-radius: 4px;
 }
 
 .contact-item P:last-child {

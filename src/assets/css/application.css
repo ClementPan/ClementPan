@@ -79,7 +79,7 @@ section .title h1 {
   margin: 0 12px;
   /* border-radius: 12px 12px 0 0; */
   overflow: hidden;
-  border: 1px solid var(--light-grey);
+  border: 1px solid #ddd;
 }
 
 #techstack .card {

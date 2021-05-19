@@ -54,6 +54,7 @@ export default {
   padding: 8px 12px;
   border-radius: 12px;
   font-weight: var(--title-weight);
+  border: 1px solid var(--dark-grey);
 }
 
 .card .image img {
@@ -66,14 +67,23 @@ export default {
   padding: 16px;
 }
 
+.content p {
+  font-weight: 700;
+}
+
 .list-item {
   margin: 8px 0;
   padding: 0;
+  padding-left: 0;
+  /* border: 1px solid #000; */
+  background-color: transparent;
 }
 
 .list-item:hover {
-  padding: 0 0 0 4px;
-  transition: padding-left 1 linear;
+  padding-left: 4px;
+  background-color: var(--font-white);
+  transition: 0.1s linear;
+  cursor: pointer;
 }
 
 .pointer {
