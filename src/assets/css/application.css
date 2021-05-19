@@ -116,17 +116,7 @@ section .title h1 {
 }
 
 label:hover {
-  /* border: 1px solid #000; */
-}
-
-.dropdown label > img {
-  transform: rotate(180deg);
-  transition: transform 0.15s linear;
-}
-
-.dropdown input:checked + label > img {
-  transform: rotate(0deg);
-  transition: transform 0.15s linear;
+  cursor: pointer;
 }
 
 .card-body {

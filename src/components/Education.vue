@@ -137,10 +137,19 @@ export default {
     flex-flow: row wrap;
   }
 
-  .card:first-child {
+  .card {
+    min-width: 40%;
+    width: 40%;
+    /* max-width: 50%; */
     flex: 1;
-    min-width: 80%;
-    border: 1px solid #000;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--light-grey);
+  }
+
+  .card:last-child {
+    /* display: block; */
+    /* flex: 0; */
+    /* min-width: 80%; */
   }
 }
 </style>

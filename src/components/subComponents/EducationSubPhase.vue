@@ -15,11 +15,15 @@
 
       <div class="dropdown">
         <input
-          ref="input"
           type="checkbox"
           :id="`dropdown-${subPhaseData.id}`"
+          :value="isDropped"
         />
-        <label :for="`dropdown-${subPhaseData.id}`" @click="drop">
+        <label
+          :class="{ rotate: isDropped }"
+          :for="`dropdown-${subPhaseData.id}`"
+          @click="drop"
+        >
           <img :src="subDropdownIcon" alt="" />
         </label>
       </div>
@@ -31,7 +35,6 @@
           :key="index"
         >
           <p class="item-index">{{ index + 1 }}：</p>
-          <!-- <img :src="checkedIcon" alt="" /> -->
           <p>
             {{ item }}
           </p>
@@ -62,12 +65,8 @@ export default {
   },
   methods: {
     drop() {
-      const input = this.$refs.input;
-      // false: dropped, true: undropped
-      // console.log(input.id + " isChecked: " + !input.checked);
-      if (input.checked) {
-        this.isDropped = false;
-        return;
+      if (this.isDropped) {
+        return (this.isDropped = false);
       }
       this.isDropped = true;
     },
@@ -121,5 +120,15 @@ export default {
 .item-index {
   width: 24px;
   /* border: 1px solid #000; */
+}
+
+.dropdown label img {
+  transform: rotate(180deg);
+  transition: transform 0.15s linear;
+}
+
+.dropdown input:checked + label img {
+  transform: rotate(0deg);
+  transition: transform 0.15s linear;
 }
 </style>

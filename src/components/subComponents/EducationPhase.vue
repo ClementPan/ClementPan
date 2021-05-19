@@ -7,20 +7,24 @@
         </div>
       </a>
       <h1>{{ phaseData.title }}</h1>
-      <div class="dropdown">
+      <div class="dropdown" v-if="phaseData.content.length">
         <input
-          :ref="`dropdown${phaseData.id}`"
           type="checkbox"
           :id="`dropdown${phaseData.id}`"
+          :value="isDropped"
         />
-        <label :for="`dropdown${phaseData.id}`" @click="drop">
+
+        <label
+          :class="{ rotate: isDropped }"
+          :for="`dropdown${phaseData.id}`"
+          @click="drop"
+        >
           <img :src="dropdownIcon" alt="" />
         </label>
       </div>
     </div>
-    <!-- <div class="card-body" v-show="isDropped"> -->
     <div class="card-body" :class="{ isDropped: isDropped }">
-      <ul class="sub-phase-list">
+      <ul v-if="phaseData.content.length" class="sub-phase-list">
         <EducationSubPhase
           v-for="(subPhase, index) of phaseData.content"
           :key="index"
@@ -52,8 +56,7 @@ export default {
   },
   methods: {
     drop() {
-      const input = this.$refs[`dropdown${this.phaseData.id}`];
-      if (input.checked) {
+      if (this.isDropped) {
         return (this.isDropped = false);
       }
       this.isDropped = true;
@@ -97,7 +100,16 @@ export default {
 }
 
 .card-body {
-  /* border: 1px solid #000; */
   padding-left: 48px;
+}
+
+.dropdown label img {
+  transform: rotate(180deg);
+  transition: transform 0.15s linear;
+}
+
+.dropdown .rotate img {
+  transform: rotate(0deg);
+  transition: transform 0.15s linear;
 }
 </style>
