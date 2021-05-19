@@ -40,7 +40,7 @@ export default {
   name: "Profile",
   data() {
     return {
-      motto: "A Vue.js web front-end developer",
+      motto: "A Vue.js front-end developer",
       iconList: [
         {
           id: 1,
@@ -143,5 +143,33 @@ section {
 
 .description li {
   display: flex;
+}
+
+@media (min-width: 768px) {
+  .card {
+    display: flex;
+  }
+
+  .avatar {
+    flex: 2;
+  }
+
+  .card-content {
+    flex: 3;
+    margin: 0;
+    padding: 0;
+  }
+
+  .motto {
+    text-align: left;
+  }
+
+  .icon-list {
+    justify-content: flex-start;
+  }
+
+  .icon-list li {
+    margin-right: 18px;
+  }
 }
 </style>

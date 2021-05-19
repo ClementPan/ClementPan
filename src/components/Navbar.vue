@@ -142,8 +142,9 @@ nav::-webkit-scrollbar {
 }
 
 @media (min-width: 376px) {
-  #navbar {
-    height: 240px;
+  .navlist {
+    align-items: center;
+    justify-content: space-around;
   }
 }
 </style>

@@ -71,4 +71,9 @@ export default {
 </script>
 
 <style scoped>
+@media (min-width: 768px) {
+  .cards {
+    justify-content: center;
+  }
+}
 </style>

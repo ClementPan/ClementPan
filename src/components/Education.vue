@@ -131,4 +131,16 @@ export default {
 </script>
 
 <style scoped>
+@media (min-width: 768px) {
+  .phases {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .card:first-child {
+    flex: 1;
+    min-width: 80%;
+    border: 1px solid #000;
+  }
+}
 </style>

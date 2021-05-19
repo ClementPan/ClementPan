@@ -47,7 +47,7 @@ export default {
   data() {
     return {
       dropdownIcon: dropdown,
-      isDropped: false,
+      isDropped: true,
     };
   },
   methods: {
