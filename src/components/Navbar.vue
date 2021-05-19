@@ -91,6 +91,11 @@ nav {
   overflow-x: scroll;
 }
 
+nav {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 nav::-webkit-scrollbar {
   display: none;
 }

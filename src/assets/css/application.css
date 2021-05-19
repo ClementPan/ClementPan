@@ -83,6 +83,15 @@ section .title h1 {
   display: none;
 }
 
+.cards {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.cards::-webkit-scrollbar {
+  display: none;
+}
+
 #techstack .card,
 #portfolio .card {
   margin: 0 12px;

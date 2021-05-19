@@ -6,12 +6,14 @@
     <Portfolio />
     <Education />
     <Contact />
+    <UpButton />
   </div>
 </template>
 
 <script>
 import "./assets/css/normalize.css";
 import "./assets/css/application.css";
+import UpButton from "./components/UpButton";
 import Navbar from "./components/Navbar";
 import Profile from "./components/Profile";
 import TechStack from "./components/TechStack";
@@ -21,7 +23,15 @@ import Contact from "./components/Contact";
 
 export default {
   name: "App",
-  components: { Navbar, Education, Profile, TechStack, Portfolio, Contact },
+  components: {
+    Navbar,
+    Education,
+    Profile,
+    TechStack,
+    Portfolio,
+    Contact,
+    UpButton,
+  },
 };
 </script>
 
