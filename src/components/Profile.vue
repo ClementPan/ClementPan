@@ -72,7 +72,7 @@ export default {
         {
           id: 2,
           head: "尋找職位",
-          body: "前端工程師",
+          body: "網頁前端工程師",
         },
         {
           id: 3,
@@ -89,9 +89,8 @@ export default {
 section {
   height: auto;
   border: none;
-  background-color: var(--dark-grey);
-  background-color: #1d3557;
-  /* background-color: #0d1b3a; */
+  /* background-color: var(--dark-grey); */
+  background-color: var(--the-blue);
 }
 
 .avatar {
@@ -116,12 +115,13 @@ section {
 }
 
 .motto {
-  margin-bottom: 36px;
+  margin-bottom: 24px;
   text-align: center;
 }
 
 .motto p {
   display: inline-block;
+  font-size: 20px;
   font-weight: 500;
   /* border-bottom: 2px solid var(--dark-grey); */
   border-bottom: 2px solid #f1faee;

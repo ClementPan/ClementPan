@@ -5,7 +5,7 @@
       <img :src="cardData.img" alt="" />
     </div>
     <div class="content">
-      <p>開發經驗：</p>
+      <p>具備開發經驗：</p>
       <ul
         class="content-list"
         v-for="(item, index) of cardData.content"
@@ -49,12 +49,14 @@ export default {
   position: absolute;
   top: 12px;
   left: 12px;
-  color: var(--font-dark);
-  background-color: var(--font-white);
+  color: var(--the-blue);
+  background-color: #f1faee;
+  background-color: var(--the-blue);
+  color: var(--pure-white);
   padding: 8px 12px;
   border-radius: 12px;
   font-weight: var(--title-weight);
-  border: 1px solid var(--dark-grey);
+  /* border: 1px solid var(--dark-grey); */
 }
 
 .card .image img {
@@ -75,13 +77,11 @@ export default {
   margin: 8px 0;
   padding: 0;
   padding-left: 0;
-  /* border: 1px solid #000; */
   background-color: transparent;
 }
 
 .list-item:hover {
   padding-left: 4px;
-  background-color: var(--font-white);
   transition: 0.1s linear;
   cursor: pointer;
 }
@@ -90,5 +90,20 @@ export default {
   width: 12px;
   height: 12px;
   transform: rotate(90deg);
+}
+
+@media screen and (max-width: 980px) {
+  .card {
+    transform: translateY(0);
+    background-color: #fff;
+  }
+
+  .card:not(:first-child) {
+    margin-left: -80px !important;
+  }
+
+  .card:hover ~ .card {
+    transform: translateX(100px);
+  }
 }
 </style>

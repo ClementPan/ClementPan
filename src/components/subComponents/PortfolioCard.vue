@@ -111,6 +111,10 @@ export default {
   align-items: center;
 }
 
+.link a p {
+  font-weight: 700;
+}
+
 .link a img {
   width: 100%;
   height: 100%;
@@ -119,8 +123,13 @@ export default {
 
 .link:hover {
   background-color: var(--font-white);
+  background-color: var(--the-blue);
   transition: 0.3s linear;
   width: 100px;
+}
+
+.link:hover a p {
+  color: var(--pure-white);
 }
 
 .link:hover img {
@@ -131,14 +140,14 @@ export default {
   position: absolute;
   left: 12px;
   bottom: 12px;
-  background-color: var(--font-dark);
+  background-color: var(--the-blue);
   color: var(--pure-white);
   padding: 0 8px;
   transition: 0.15s linear;
 }
 
 .name:hover {
-  color: var(--font-dark);
+  color: var(--the-blue);
   background-color: var(--pure-white);
   cursor: pointer;
   bottom: 16px;
@@ -176,5 +185,20 @@ export default {
 
 .text {
   margin-top: 8px;
+}
+
+@media (max-width: 1200px) {
+  .card {
+    transform: translateY(0);
+    background-color: var(--pure-white);
+  }
+
+  .card:not(:first-child) {
+    margin-left: -80px !important;
+  }
+
+  .card:hover ~ .card {
+    transform: translateX(100px);
+  }
 }
 </style>

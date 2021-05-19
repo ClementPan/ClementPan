@@ -67,6 +67,7 @@ export default {
   min-width: 99vw;
   width: 99vw;
   background-color: var(--footer-background);
+  background-color: var(--the-blue);
   display: flex;
   padding: 36px 0 0 0;
   flex-direction: column;
@@ -84,6 +85,8 @@ export default {
 
 .brand span,
 .brand h1 {
+  display: inline-block;
+  height: 36px;
   position: relative;
   font-size: 24px;
   font-weight: 700;
@@ -93,20 +96,27 @@ export default {
   z-index: 999;
 }
 
+.brand h1 {
+  /* height: 24px; */
+  border-bottom: 2px solid var(--dark-grey);
+}
+
 .brand span {
+  height: 100%;
   border: none;
   color: var(--footer-background);
   font-weight: 900;
+  border-bottom: 2px solid #222;
 }
 
 .brand h1::before {
   position: absolute;
   top: 50%;
-  left: -10%;
+  left: -24%;
   transform: translateY(-50%);
   content: "";
-  width: 72px;
-  height: 72px;
+  width: 96px;
+  height: 96px;
   background-color: #ccc;
   border-radius: 50%;
   z-index: -1;
@@ -144,9 +154,7 @@ export default {
 }
 
 .copyright {
-  /* background-color: var(--font-dark); */
   color: var(--font-white);
-  /* color: var(--font-dark); */
   font-size: 12px;
   padding: 8px 0;
   text-align: center;

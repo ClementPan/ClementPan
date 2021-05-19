@@ -45,10 +45,10 @@ export default {
           // title: "Tabs Archive",
           title: "Any new idea?",
           img: "",
-          type: "",
+          type: "???",
           github: "https://github.com/ClementPan",
-          techs: [],
-          spec: [],
+          techs: ["???"],
+          spec: ["???"],
           text: "Brainstorming!",
         },
       ],
@@ -58,7 +58,7 @@ export default {
 </script>
 
 <style scoped>
-@media (min-width: 768px) {
+@media (min-width: 880px) {
   .cards {
     justify-content: center;
   }

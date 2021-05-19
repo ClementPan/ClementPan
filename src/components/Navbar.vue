@@ -71,8 +71,9 @@ export default {
 }
 
 .brand img {
-  width: 28px;
-  height: 28px;
+  transform: translateY(2px);
+  width: 32px;
+  height: 32px;
   margin-right: 2px;
 }
 
@@ -86,7 +87,7 @@ nav {
   top: 2px;
   z-index: 999;
   background-color: #fff;
-  border-top: 2px solid var(--light-grey);
+  border-top: 2px solid var(--the-blue);
   overflow-x: scroll;
 }
 
@@ -95,11 +96,11 @@ nav::-webkit-scrollbar {
 }
 
 .navlist {
+  padding-left: 12px;
   /* width: 100%; */
   height: 100%;
   display: flex;
   flex-direction: row;
-  /* justify-content: space-evenly; */
 }
 
 .navItem {
@@ -116,6 +117,7 @@ nav::-webkit-scrollbar {
 .navItem p {
   height: 20px;
   color: var(--dark-grey);
+  color: var(--the-blue);
   font-weight: 700;
   line-height: 20px;
   text-align: center;
@@ -139,8 +141,14 @@ nav::-webkit-scrollbar {
 }
 
 @media (min-width: 376px) {
-  .navlist {
+  /* .navlist {
     align-items: center;
+  } */
+}
+
+@media (min-width: 480px) {
+  .navlist {
+    padding-left: 0;
     justify-content: space-around;
   }
 }

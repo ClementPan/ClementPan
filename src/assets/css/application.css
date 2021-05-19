@@ -2,10 +2,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500&display=swap');
 
+@font-face {
+  font-family: 'Taipei Sans TC';
+  src: url('../fonts/TaipeiSansTCBeta-Regular.ttf')  format('truetype');
+}
+
+
 * {
   font-size: 16px;
   font-weight: normal;
-  font-family: 'Montserrat', 'Noto Serif TC', sans-serif;
+  /* font-family: 'Taipei Sans TC','Montserrat', 'Noto Serif TC', sans-serif; */
+  font-family: 'Taipei Sans TC','Montserrat', 'Noto Serif TC', sans-serif;
   line-height: 1.5;
   color: #222;
   outline: none;
@@ -21,7 +28,8 @@
   --footer-background: #20201a;
   --font-dark: #222;
   --title-weight: 700;
-  --body-background: #ccc
+  --body-background: #ccc;
+  --the-blue: #1d3557;
 }
 
 body {
@@ -56,6 +64,7 @@ section .title::after {
   height: 100%;
   width: calc(100% - 24px);
   border-bottom: 2px solid #aaa;
+  border-bottom: 2px solid var(--the-blue);
 }
 
 section .title h1 {
@@ -77,10 +86,18 @@ section .title h1 {
 #techstack .card,
 #portfolio .card {
   margin: 0 12px;
-  /* border-radius: 12px 12px 0 0; */
   overflow: hidden;
   border: 1px solid #ddd;
+  transition: transform 0.2s linear;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 6px;
 }
+
+#techstack .card:hover,
+#portfolio .card:hover {
+  transform: translateY(-12px);
+  transition: transform 0.2s linear;
+}
+
 
 #techstack .card {
   min-width: 280px;
