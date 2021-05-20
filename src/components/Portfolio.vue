@@ -37,7 +37,7 @@ export default {
           img: "",
           type: "個人專案",
           github: "https://github.com/ClementPan",
-          techs: ["Vue.js", "Chrome extension"],
+          techs: ["Vanilla.js", "Chrome extension"],
           spec: ["整理", "分類分頁"],
           text: "Under Construction!",
         },
