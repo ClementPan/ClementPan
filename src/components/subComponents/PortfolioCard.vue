@@ -1,11 +1,12 @@
 <template>
-  <div
+  <!-- <div
     :id="cardId"
     :ref="cardId"
     class="card"
     :class="{ showCard }"
     @click="clickHandler"
-  >
+  > -->
+  <div :id="cardId" :ref="cardId" class="card" @click="clickHandler">
     <div class="image">
       <img :src="cardData.img | emptyImageFilter" alt="" />
       <img :src="cardData.gif | emptyImageFilter" alt="" />
@@ -67,14 +68,13 @@ export default {
   data() {
     return {
       link,
-      showCard: false,
+      // showCard: false,
     };
   },
   methods: {
     clickHandler() {
       const targetCard = this.$refs[this.cardId];
       this.$emit("afterCardClicked", targetCard);
-      // this.$emit("afterCardClicked", targetCard.id);
     },
   },
   filters: {
@@ -82,15 +82,15 @@ export default {
       return list.join("、");
     },
   },
-  watch: {
-    cardClicked(newVal) {
-      if (this.cardId === newVal) {
-        this.showCard = true;
-      } else {
-        this.showCard = false;
-      }
-    },
-  },
+  // watch: {
+  //   cardClicked(newVal) {
+  //     if (this.cardId === newVal) {
+  //       this.showCard = true;
+  //     } else {
+  //       this.showCard = false;
+  //     }
+  //   },
+  // },
 };
 </script>
 

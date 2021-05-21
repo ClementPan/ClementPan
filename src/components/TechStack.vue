@@ -3,8 +3,15 @@
     <div class="title">
       <h1>Tech Stack</h1>
     </div>
-    <div class="cards">
-      <Teckcard v-for="card of cards" :key="card.id" :cardData="card" />
+    <div ref="cards" class="cards">
+      <Teckcard
+        v-for="(card, index) of cards"
+        :key="index"
+        :cardId="`card${index}`"
+        :cardData="card"
+        :cardClicked="clickedCardId"
+        @afterCardClicked="afterCardClicked"
+      />
     </div>
   </section>
 </template>
@@ -22,9 +29,9 @@ export default {
   },
   data() {
     return {
+      clickedCardId: "",
       cards: [
         {
-          id: 1,
           title: "Front-end",
           img: frontend,
           content: [
@@ -38,7 +45,6 @@ export default {
           ],
         },
         {
-          id: 2,
           title: "Backend",
           img: backend,
           content: [
@@ -51,7 +57,6 @@ export default {
           ],
         },
         {
-          id: 3,
           title: "others",
           img: others,
           content: [
@@ -66,6 +71,46 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    afterCardClicked(targetCard) {
+      this.clickedCardId = targetCard.id;
+      this.centerCard(targetCard);
+    },
+    getViewportWidth() {
+      const viewWidth = Math.max(
+        document.documentElement.clientWidth || 0,
+        window.innerWidth || 0
+      );
+      return viewWidth < 375 ? true : false;
+    },
+    centerCard(targetCard) {
+      const isOnMobile = this.getViewportWidth();
+      if (!isOnMobile) {
+        return;
+      }
+
+      const cards = this.$refs.cards;
+      const cardTopToViewportTop = targetCard.getBoundingClientRect().top;
+
+      // for scrollY: distance from document top to Dom top
+      const { pageYOffset } = window;
+      const scrollY = pageYOffset + cardTopToViewportTop - 120;
+
+      // for scroll x: distance from document left to Dom left
+      // const scrollX = targetCard.offsetLeft - 12;
+      const scrollX = targetCard.offsetLeft - 24;
+
+      window.scroll({
+        top: scrollY,
+        behavior: "smooth",
+      });
+
+      cards.scroll({
+        left: scrollX,
+        behavior: "smooth",
+      });
+    },
   },
 };
 </script>

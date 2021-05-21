@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div :id="cardId" :ref="cardId" class="card" @click="clickHandler">
     <div class="image">
       <h1>{{ cardData.title }}</h1>
       <img :src="cardData.img" alt="" />
@@ -26,8 +26,16 @@ import pointer from "../../assets/images/pointer.svg";
 export default {
   name: "TechCard",
   props: {
+    cardId: {
+      type: String,
+      required: true,
+    },
     cardData: {
       type: Object,
+      required: true,
+    },
+    cardClicked: {
+      type: String,
       required: true,
     },
   },
@@ -35,6 +43,12 @@ export default {
     return {
       pointer: pointer,
     };
+  },
+  methods: {
+    clickHandler() {
+      const targetCard = this.$refs[this.cardId];
+      this.$emit("afterCardClicked", targetCard);
+    },
   },
 };
 </script>

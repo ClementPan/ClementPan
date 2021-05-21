@@ -5,7 +5,6 @@
     </div>
     <div ref="cards" class="cards">
       <PortfolioCard
-        :ref="`card${index}`"
         v-for="(card, index) of cards"
         :key="index"
         :cardId="`card${index}`"
@@ -66,10 +65,7 @@ export default {
   },
   methods: {
     afterCardClicked(targetCard) {
-      // set clickedCardId to display view
       this.clickedCardId = targetCard.id;
-      console.log("clickedCardId: " + this.clickedCardId);
-
       this.centerCard(targetCard);
     },
     getViewportWidth() {
@@ -93,7 +89,8 @@ export default {
       const scrollY = pageYOffset + cardTopToViewportTop - 120;
 
       // for scroll x: distance from document left to Dom left
-      const scrollX = targetCard.offsetLeft - 12;
+      // const scrollX = targetCard.offsetLeft - 12;
+      const scrollX = targetCard.offsetLeft - 24;
 
       window.scroll({
         top: scrollY,
