@@ -78,6 +78,7 @@ section .title h1 {
   align-items: center;
   overflow-x: scroll;
   padding: 12px 0;
+  -webkit-overflow-scrolling: touch;
 }
 
 .cards::-webkit-scrollbar {
