@@ -1,5 +1,11 @@
 <template>
-  <div class="card">
+  <div
+    :id="cardId"
+    :ref="cardId"
+    class="card"
+    :class="{ showCard }"
+    @click="clickHandler"
+  >
     <div class="image">
       <img :src="cardData.img | emptyImageFilter" alt="" />
       <img :src="cardData.gif | emptyImageFilter" alt="" />
@@ -41,37 +47,66 @@
 <script>
 import link from "../../assets/images/link.svg";
 import { emptyImageFilter } from "../../utils/mixin";
-import vue from "../../assets/images/vue.png";
 export default {
   name: "PortfolioCard",
   mixins: [emptyImageFilter],
   props: {
+    cardId: {
+      type: String,
+      required: true,
+    },
     cardData: {
       type: Object,
       required: true,
     },
-  },
-  created() {
-    this.projectTags = this.cardData.techs;
+    cardClicked: {
+      type: String,
+      required: true,
+    },
   },
   data() {
     return {
       link,
-      tags: {
-        vue,
-      },
-      projectTags: [],
+      showCard: false,
     };
+  },
+  methods: {
+    clickHandler() {
+      const targetCard = this.$refs[this.cardId];
+      this.$emit("afterCardClicked", targetCard);
+      // this.$emit("afterCardClicked", targetCard.id);
+    },
   },
   filters: {
     listFormatFilter(list) {
       return list.join("、");
     },
   },
+  watch: {
+    cardClicked(newVal) {
+      if (this.cardId === newVal) {
+        this.showCard = true;
+      } else {
+        this.showCard = false;
+      }
+    },
+  },
 };
 </script>
 
 <style scoped>
+.card {
+  background-color: var(--pure-white);
+}
+
+/* .card:not(:first-child) {
+  margin-left: -80px !important;
+}
+
+.showCard {
+  margin-right: 100px !important;
+} */
+
 .image {
   width: 100%;
   height: 240px;
@@ -85,8 +120,8 @@ export default {
   object-fit: cover;
 }
 
-.card:hover img:last-child {
-  border: 1px solid #000;
+.card:hover {
+  z-index: 100;
 }
 
 .card:hover img:first-child {
@@ -190,18 +225,15 @@ export default {
   margin-top: 8px;
 }
 
-@media (max-width: 1200px) {
-  .card {
-    transform: translateY(0);
-    background-color: var(--pure-white);
-  }
+@media screen and (min-width: 376px) {
+  /* .showCard {
+    margin-right: 0 !important;
+  } */
+}
 
-  .card:not(:first-child) {
-    margin-left: -80px !important;
-  }
-
-  .card:hover ~ .card {
-    transform: translateX(100px);
-  }
+@media screen and (min-width: 1030px) {
+  /* .card:not(:first-child) {
+    margin: 0 12px !important;
+  } */
 }
 </style>

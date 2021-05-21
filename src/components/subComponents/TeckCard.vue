@@ -93,7 +93,7 @@ export default {
 }
 
 @media screen and (max-width: 980px) {
-  .card {
+  /* .card {
     transform: translateY(0);
     background-color: #fff;
   }
@@ -104,6 +104,6 @@ export default {
 
   .card:hover ~ .card {
     transform: translateX(100px);
-  }
+  } */
 }
 </style>

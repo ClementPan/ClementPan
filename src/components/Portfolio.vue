@@ -1,13 +1,17 @@
 <template>
-  <section id="portfolio">
+  <section ref="portfolio" id="portfolio">
     <div class="title">
       <h1>Portfolio</h1>
     </div>
-    <div class="cards">
+    <div ref="cards" class="cards">
       <PortfolioCard
+        :ref="`card${index}`"
         v-for="(card, index) of cards"
         :key="index"
+        :cardId="`card${index}`"
         :cardData="card"
+        :cardClicked="clickedCardId"
+        @afterCardClicked="afterCardClicked"
       />
     </div>
   </section>
@@ -23,6 +27,7 @@ export default {
   components: { PortfolioCard },
   data() {
     return {
+      clickedCardId: "",
       cards: [
         {
           title: "Simple Twitter",
@@ -58,6 +63,48 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    afterCardClicked(targetCard) {
+      // set clickedCardId to display view
+      this.clickedCardId = targetCard.id;
+      console.log("clickedCardId: " + this.clickedCardId);
+
+      this.centerCard(targetCard);
+    },
+    getViewportWidth() {
+      const viewWidth = Math.max(
+        document.documentElement.clientWidth || 0,
+        window.innerWidth || 0
+      );
+      return viewWidth < 375 ? true : false;
+    },
+    centerCard(targetCard) {
+      const isOnMobile = this.getViewportWidth();
+      if (!isOnMobile) {
+        return;
+      }
+
+      const cards = this.$refs.cards;
+      const cardTopToViewportTop = targetCard.getBoundingClientRect().top;
+
+      // for scrollY: distance from document top to Dom top
+      const { pageYOffset } = window;
+      const scrollY = pageYOffset + cardTopToViewportTop - 120;
+
+      // for scroll x: distance from document left to Dom left
+      const scrollX = targetCard.offsetLeft - 12;
+
+      window.scroll({
+        top: scrollY,
+        behavior: "smooth",
+      });
+
+      cards.scroll({
+        left: scrollX,
+        behavior: "smooth",
+      });
+    },
   },
 };
 </script>

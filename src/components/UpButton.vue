@@ -19,6 +19,7 @@ export default {
   right: 2rem;
   border: none;
   border-radius: 8px;
+  z-index: 999;
 }
 
 p {
