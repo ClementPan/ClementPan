@@ -2,13 +2,7 @@
   <div class="card">
     <div class="image">
       <img :src="cardData.img | emptyImageFilter" alt="" />
-      <!-- <div class="tags">
-        <div class="tag">
-          <img :src="tags.vue" alt="" />
-          <img :src="tags.vue" alt="" />
-          <img :src="tags.vue" alt="" />
-        </div>
-      </div> -->
+      <img :src="cardData.gif | emptyImageFilter" alt="" />
       <div class="link">
         <a :href="cardData.github" target="_blank">
           <img :src="link" alt="" />
@@ -89,6 +83,15 @@ export default {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.card:hover img:last-child {
+  border: 1px solid #000;
+}
+
+.card:hover img:first-child {
+  position: absolute;
+  opacity: 0;
 }
 
 .link {

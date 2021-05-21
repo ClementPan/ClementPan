@@ -15,6 +15,8 @@
 
 <script>
 import twitter from "../assets/images/twitter.png";
+import twitterGif from "../assets/images/simpletwitter.gif";
+
 import PortfolioCard from "./subComponents/PortfolioCard";
 export default {
   name: "Portfolio",
@@ -25,6 +27,7 @@ export default {
         {
           title: "Simple Twitter",
           img: twitter,
+          gif: twitterGif,
           type: "團體協作專案",
           github: "https://github.com/ClementPan/simpleTwitterX",
           techs: ["Vue.js", "Vuex", "socket.io"],
@@ -35,6 +38,7 @@ export default {
         {
           title: "Tabs Archive",
           img: "",
+          gif: "",
           type: "個人專案",
           github: "https://github.com/ClementPan",
           techs: ["Vanilla.js", "SCSS", "Chrome extension"],
@@ -45,6 +49,7 @@ export default {
           // title: "Tabs Archive",
           title: "Any new idea?",
           img: "",
+          gif: "",
           type: "???",
           github: "https://github.com/ClementPan",
           techs: ["???"],
@@ -58,6 +63,9 @@ export default {
 </script>
 
 <style scoped>
+.cards {
+  height: 600px;
+}
 @media (min-width: 880px) {
   .cards {
     justify-content: center;
