@@ -20,10 +20,11 @@ export default {
   border: none;
   border-radius: 8px;
   z-index: 999;
+  background-color: var(--the-blue);
 }
 
 p {
-  color: var(--the-blue);
-  font-weight: 700;
+  color: var(--pure-white);
+  font-weight: 500;
 }
 </style>

@@ -110,6 +110,7 @@ export default {
         left: scrollX,
         behavior: "smooth",
       });
+      console.log("Scroll!!!!!!!!");
     },
   },
 };

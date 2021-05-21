@@ -6,7 +6,8 @@
     :class="{ showCard }"
     @click="clickHandler"
   > -->
-  <div :id="cardId" :ref="cardId" class="card" @click="clickHandler">
+  <!-- <div :id="cardId" :ref="cardId" class="card" @click="clickHandler"> -->
+  <div :id="cardId" :ref="cardId" class="card" @touchend="clickHandler">
     <div class="image">
       <img :src="cardData.img | emptyImageFilter" alt="" />
       <img :src="cardData.gif | emptyImageFilter" alt="" />
