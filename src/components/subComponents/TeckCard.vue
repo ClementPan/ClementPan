@@ -1,6 +1,6 @@
 <template>
   <!-- <div :id="cardId" :ref="cardId" class="card" @click="clickHandler"> -->
-  <div :id="cardId" :ref="cardId" class="card" @touchend="clickHandler">
+  <div :id="cardId" :ref="cardId" class="card" v-touch="clickHandler">
     <div class="image">
       <h1>{{ cardData.title }}</h1>
       <img :src="cardData.img" alt="" />

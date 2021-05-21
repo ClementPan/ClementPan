@@ -73,7 +73,7 @@ export default {
         document.documentElement.clientWidth || 0,
         window.innerWidth || 0
       );
-      return viewWidth < 375 ? true : false;
+      return viewWidth < 425 ? true : false;
     },
     centerCard(targetCard) {
       const isOnMobile = this.getViewportWidth();
@@ -101,7 +101,6 @@ export default {
         left: scrollX,
         behavior: "smooth",
       });
-      console.log("Scroll!!!!!!!!");
     },
   },
 };

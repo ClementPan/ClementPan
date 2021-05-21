@@ -1,7 +1,7 @@
 <template>
   <button class="up-button">
     <a href="#navbar">
-      <p>Go top!</p>
+      <p>Go Top!</p>
     </a>
   </button>
 </template>
@@ -20,11 +20,13 @@ export default {
   border: none;
   border-radius: 8px;
   z-index: 999;
-  background-color: var(--the-blue);
+  background-color: var(--pure-white);
+  border: 2px solid var(--the-blue);
+  padding: 4px 8px;
 }
 
 p {
-  color: var(--pure-white);
-  font-weight: 500;
+  color: var(--the-blue);
+  font-weight: 700;
 }
 </style>
