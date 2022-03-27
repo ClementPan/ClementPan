@@ -18,11 +18,7 @@ Well, and everything is new and fun to me.</p>
     </tr>
     <tr>
       <td>&blk34;&blk34;&blk34;&blk34;&blk14;&blk14;&blk14;&blk14;&blk14;&blk14;</td>
-      <td>CSS</td>
-    </tr>
-    <tr>
-      <td>&blk34;&blk34;&blk34;&blk14;&blk14;&blk14;&blk14;&blk14;&blk14;&blk14;</td>
-      <td>Bootstrap</td>
+      <td>CSS/SCSS</td>
     </tr>
     <tr>
       <td>&blk34;&blk34;&blk34;&blk34;&blk34;&blk34;&blk14;&blk14;&blk14;&blk14;</td>
@@ -30,22 +26,14 @@ Well, and everything is new and fun to me.</p>
     </tr>
     <tr>
       <td>&blk34;&blk34;&blk34;&blk34;&blk14;&blk14;&blk14;&blk14;&blk14;&blk14;</td>
+      <td>Typescript</td>
+    </tr>
+    <tr>
+      <td>&blk34;&blk34;&blk34;&blk34;&blk34;&blk34;&blk14;&blk14;&blk14;&blk14;</td>
+      <td>Angular</td>
+    </tr>
+    <tr>
+      <td>&blk34;&blk34;&blk34;&blk34;&blk14;&blk14;&blk14;&blk14;&blk14;&blk14;</td>
       <td>Vue.js</td>
-    </tr>
-    <tr>
-      <td>&blk34;&blk34;&blk34;&blk14;&blk14;&blk14;&blk14;&blk14;&blk14;&blk14;</td>
-      <td>MongoDB</td>
-    </tr>
-    <tr>
-      <td>&blk34;&blk34;&blk14;&blk14;&blk14;&blk14;&blk14;&blk14;&blk14;&blk14;</td>
-      <td>MySQL</td>
-    </tr>
-    <tr>
-      <td>&blk34;&blk34;&blk34;&blk14;&blk14;&blk14;&blk14;&blk14;&blk14;&blk14;</td>
-      <td>Git</td>
-    </tr>
-    <tr>
-      <td>&blk34;&blk34;&blk14;&blk14;&blk14;&blk14;&blk14;&blk14;&blk14;&blk14;</td>
-      <td>Python</td>
     </tr>
   </table>
