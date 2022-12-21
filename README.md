@@ -8,7 +8,7 @@ Or other mini projects that I created, whether by myself or according to learnin
 <br>
 Working as a frontend developer equipped with skills like Angular, RxJS, Scss, Vue.js, and more,<br>
 and experience of development of hybrid app in financial related domain, willing to try anything new and fun.<br>
-<h2>Skill sets download process...</h3>
+<!-- <h2>Skill sets download process...</h3> -->
 <!-- <table>
     <tr>
       <td>&blk34;&blk34;&blk34;&blk34;&blk34;&blk34;&blk14;&blk14;&blk14;&blk14;</td>
